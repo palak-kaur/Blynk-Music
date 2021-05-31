@@ -95,7 +95,7 @@ $( document ).ready(function() {
     });
 
     function searchResult(raw_search_query, search_query){
-
+  
      
      // Make Spotify API call
      // Note: We are using the track API endpoint.
