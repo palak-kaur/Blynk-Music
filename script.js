@@ -109,6 +109,7 @@ $( document ).ready(function() {
      // Load our songs from Spotify into our page
      let num_of_tracks = data.tracks.items.length;
      let count = 0;
+     console.log("count");
      // Max number of songs is 12
      const max_songs = 12;
      while(count < max_songs && count < num_of_tracks){
