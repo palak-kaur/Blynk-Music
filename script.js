@@ -82,7 +82,7 @@ $( document ).ready(function() {
          $(".search-bar").on('keypress',function(e) {
             if(e.which == 13) {
                 //Get the value of the search box
-                let raw_search_query = $(".search-bar").val();
+                let raw_search_query = $(".search-bar").text();
                 console.log(raw_search_query);
                 let search_query = encodeURI(raw_search_query);
                 searchResult(raw_search_query, search_query);
