@@ -81,7 +81,7 @@ $( document ).ready(function() {
          $(".search-bar").text("");
          $(".search-bar").on('keypress',function(e) {
             if(e.which == 13) {
-                alert('You pressed enter!');
+                searchResult();
             }
         });
           
@@ -91,8 +91,10 @@ $( document ).ready(function() {
         }
     });
 
+    function searchResult(){
+
      //Get the value of the search box
-     let raw_search_query = $('#search-text').val();
+     let raw_search_query = $(".search-bar").val();
      let search_query = encodeURI(raw_search_query);
      // Make Spotify API call
      // Note: We are using the track API endpoint.
@@ -122,6 +124,6 @@ $( document ).ready(function() {
 }
 }); // End of Spotify ajax call
 
-    
+}
 
  }); // End of document.ready
