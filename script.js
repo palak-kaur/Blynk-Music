@@ -71,10 +71,34 @@ $( document ).ready(function() {
         if(!isSearchOpen){
             let searchDiv = `<div class="search-screen" >
                                <div class = "search-bar" contenteditable = "true"> Search </div>
+                               <div class="container" id="song-list">
+                                    <div class="row">
+                                    <div  id="song_0" class="col"></div>
+                                    <div id="song_1" class="col"></div>
+                                    <div id="song_2" class="col"></div>
+                               </div>
+                                <div class="row">
+                                    <div id="song_3" class="col"></div>
+                                    <div id="song_4" class="col"></div>
+                                    <div id="song_5" class="col"></div>
+                                    </div>
+                                <div class="row">
+                                    <div id="song_6" class="col"></div>
+                                    <div id="song_7" class="col"></div>
+                                    <div id="song_8" class="col"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="song_9" class="col"></div>
+                                    <div id="song_10" class="col"></div>
+                                    <div id="song_11" class="col"></div>
+                                    </div>
+                                </div>
                            </div>`;
                                     
          $(".music-container").append(searchDiv);
          $(".search-bar").css({"height":"5vh","width":"50vw","border":"0.5px solid grey", "color":"grey", "border-radius": "25px", "display":"flex", "justify-content":"center", "align-items":"center", "margin-top": "3vh" });
+         $(".col").css({"display":"inline-block !important"});
+          
          $(".search-screen").css({"background-color":"black", "height":"60vh" , "width":"60vw", "display":"flex","justify-content":"center" , "box-shadow":"0 0 10px grey"});
             
          $(".search-bar").on('focus', function(){
@@ -117,11 +141,10 @@ $( document ).ready(function() {
     let id = data.tracks.items[count].id;
     // Constructing two different iframes to embed the song
     let src_str = `https://open.spotify.com/embed/track/${id}`;
-    console.log(src_str);
     let iframe = `<div class='song'><iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;
     let parent_div = $('#song_'+ count);
     parent_div.html(iframe);
-    $(".music-container").append(parent_div);
+    
     count++;
   }
 }
