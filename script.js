@@ -1,31 +1,31 @@
-// // Document has been loaded
-// $( document ).ready(function() {
-//     // Helper Function to Extract Access Token for URL
-//    const getUrlParameter = (sParam) => {
-//      let sPageURL = window.location.search.substring(1),////substring will take everything after the https link and split the #/&
-//          sURLVariables = sPageURL != undefined && sPageURL.length > 0 ? sPageURL.split('#') : [],
-//          sParameterName,
-//          i;
-//      let split_str = window.location.href.length > 0 ? window.location.href.split('#') : [];
-//      sURLVariables = split_str != undefined && split_str.length > 1 && split_str[1].length > 0 ? split_str[1].split('&') : [];
-//      for (i = 0; i < sURLVariables.length; i++) {
-//          sParameterName = sURLVariables[i].split('=');
-//          if (sParameterName[0] === sParam) {
-//              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-//          }
-//      }
-//  };
+// Document has been loaded
+$( document ).ready(function() {
+    // Helper Function to Extract Access Token for URL
+   const getUrlParameter = (sParam) => {
+     let sPageURL = window.location.search.substring(1),////substring will take everything after the https link and split the #/&
+         sURLVariables = sPageURL != undefined && sPageURL.length > 0 ? sPageURL.split('#') : [],
+         sParameterName,
+         i;
+     let split_str = window.location.href.length > 0 ? window.location.href.split('#') : [];
+     sURLVariables = split_str != undefined && split_str.length > 1 && split_str[1].length > 0 ? split_str[1].split('&') : [];
+     for (i = 0; i < sURLVariables.length; i++) {
+         sParameterName = sURLVariables[i].split('=');
+         if (sParameterName[0] === sParam) {
+             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+         }
+     }
+ };
 
-//    // Get Access Token
-//    const accessToken = getUrlParameter('access_token');
+   // Get Access Token
+   const accessToken = getUrlParameter('access_token');
 
-//    // AUTHORIZE with Spotify (if needed)
-//    // *************** REPLACE THESE VALUES! *************************
-//    let client_id = '6b2fe20563104c14a38fbf53e60ecfe8';
-//    // Use the following site to convert your regular url to the encoded version:
-//    // https://www.url-encode-decode.com/
-//    let redirect_uri = 'https%3A%2F%2Fpalak-kaur.github.io%2FBlynk-Music'; // GitHub Pages URL or whatever your public url to this app is
-//    // *************** END *************************
+   // AUTHORIZE with Spotify (if needed)
+   // *************** REPLACE THESE VALUES! *************************
+   let client_id = '6b2fe20563104c14a38fbf53e60ecfe8';
+   // Use the following site to convert your regular url to the encoded version:
+   // https://www.url-encode-decode.com/
+   let redirect_uri = 'https%3A%2F%2Fpalak-kaur.github.io%2FBlynk-Music'; // GitHub Pages URL or whatever your public url to this app is
+   // *************** END *************************
 
 //    const redirect = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}`;
 //    // Don't authorize if we have an access token already
@@ -66,20 +66,25 @@
 //      }); // End of Spotify ajax call
 //    }); // End of search button
 
+    let isSearchOpen = false;
     $(".search-nav").click(function(e){
-         let searchDiv = `<div class="search-screen" >
+        if(!isSearchOpen){
+            let searchDiv = `<div class="search-screen" >
                                <div class = "search-bar" contenteditable = "true"> Search </div>
                            </div>`;
                                     
          $(".music-container").append(searchDiv);
          $(".search-bar").css({"height":"5vh","width":"50vw","border":"0.5px solid grey", "color":"grey", "border-radius": "25px", "display":"flex", "justify-content":"center", "align-items":"center", "margin-top": "3vh" });
          $(".search-screen").css({"background-color":"black", "height":"60vh" , "width":"60vw", "display":"flex","justify-content":"center" , "box-shadow":"0 0 10px grey"});
-        
+            
+         $(".search-bar").on('focus', function(){
+            $(".search-bar").text("");
+            console.log("c");
+        });
+        isSearchOpen = true;
+        }
     });
 
-    $(".search-bar").click(function(e){
-        $(".search-bar").text("");
-    })
+    
 
-
-//  }); // End of document.ready
+ }); // End of document.ready
