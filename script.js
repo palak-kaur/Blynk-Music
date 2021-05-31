@@ -83,6 +83,7 @@ $( document ).ready(function() {
             if(e.which == 13) {
                 //Get the value of the search box
                 let raw_search_query = $(".search-bar").val();
+                console.log(raw_search_query);
                 let search_query = encodeURI(raw_search_query);
                 searchResult(raw_search_query, search_query);
             }
@@ -96,7 +97,6 @@ $( document ).ready(function() {
 
     function searchResult(raw_search_query, search_query){
   
-        console.log("count"); 
      // Make Spotify API call
      // Note: We are using the track API endpoint.
      $.ajax({
