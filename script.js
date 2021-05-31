@@ -96,7 +96,7 @@ $( document ).ready(function() {
 
     function searchResult(raw_search_query, search_query){
   
-     
+        console.log("count"); 
      // Make Spotify API call
      // Note: We are using the track API endpoint.
      $.ajax({
@@ -109,7 +109,7 @@ $( document ).ready(function() {
      // Load our songs from Spotify into our page
      let num_of_tracks = data.tracks.items.length;
      let count = 0;
-     console.log("count");
+     
      // Max number of songs is 12
      const max_songs = 12;
      while(count < max_songs && count < num_of_tracks){
