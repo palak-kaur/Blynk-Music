@@ -98,6 +98,8 @@ body {
     height : 15vh;
     margin: 20px;
     font-weight: bold;
+    color: whitesmoke;
+    font-size: large;
 }
 
 .col-home{
