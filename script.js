@@ -96,7 +96,7 @@ $( document ).ready(function() {
                            </div>`;
                                     
          $(".music-container").append(searchDiv);
-         $(".search-bar").css({"height":" 5vh","width":"50vw","border":"0.5px solid grey", "color":"grey", "border-radius": "25px", "display":"flex", "justify-content":"center", "align-items":"center", "margin-top": "3vh" });
+         $(".search-bar").css({"height":" 5vh","width":"50vw","border":"0.5px solid grey", "color":"grey", "border-radius": "25px", "display":"flex", "justify-content":"center", "align-items":"center", "margin": "13px" });
          $(".col").css({"display":"inline-block !important"});
           
          $(".search-screen").css({"background-color":"black", "height":"88vh" , "width":"83vw", "display":"flex","flex-direction":"column","justify-content":"center" ,  "box-shadow":"0 0 10px grey"});
