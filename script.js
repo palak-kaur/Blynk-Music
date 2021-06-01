@@ -156,7 +156,9 @@ $(document).on('keydown', function(event) {
     if (event.key == "Escape" && isSearchOpen) {
         console.log("ok");
         $(".search-screen").remove();     
+        isSearchOpen = false;
     }
+
 });
 
  }); // End of document.ready
