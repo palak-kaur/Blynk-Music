@@ -55,12 +55,13 @@ let id = data.tracks.items[count].id;
 // Constructing two different iframes to embed the song
 let src_str = `https://open.spotify.com/embed/track/${id}`;
 let iframe = `<div class='song'><iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;
-let parent_div = $('#song_'+ count);
+let parent_div = $('#song-home'+ count);
 parent_div.html(iframe);
 
 count++;
     }
 }
+
 }); // End of Spotify ajax call
 }
 

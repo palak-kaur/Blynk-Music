@@ -101,5 +101,10 @@ body {
     font-weight: bold;
 }
 
+.col-home{
+    display:inline-block !important;
+    
+}
+
 
 
