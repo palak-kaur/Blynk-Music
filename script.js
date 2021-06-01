@@ -153,3 +153,10 @@ $( document ).ready(function() {
 }
 
  }); // End of document.ready
+
+
+ $(document).on('keydown', function(event) {
+    if (event.key == "Escape") {
+        alert('Esc key pressed.');
+    }
+});
