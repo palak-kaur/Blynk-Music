@@ -55,8 +55,8 @@ $(document).ready(function () {
                     // Constructing two different iframes to embed the song
                     let src_str = `https://open.spotify.com/embed/track/${id}`;
                     let iframe = `<div class='song'><iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;
-                    let parent_div = $(`#row-${i}#row-home_`+count);
-                    parent_div.html(iframe);
+                    let parent_div = $(`#row-${i} #row-home_`+count);
+                    parent_div.append(iframe);
 
                     count++;
                 }
