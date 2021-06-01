@@ -152,12 +152,14 @@ $( document ).ready(function() {
 
 }
 
- }); // End of document.ready
-
-
- $(document).on('keydown', function(event) {
+$(document).on('keydown', function(event) {
     if (event.key == "Escape" && isSearchOpen) {
         console.log("ok");
         $(".search-screen").remove();     
     }
 });
+
+ }); // End of document.ready
+
+
+ 
