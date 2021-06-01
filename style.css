@@ -26,6 +26,9 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
 }
 
 .nav-container{
@@ -89,3 +92,14 @@ body {
     box-shadow: 1px 1px 11px 0.6px white;
     cursor: pointer;
 }
+
+.music-category{
+    width : 83vw;
+    height : 15vh;
+    margin: 20px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+
+
