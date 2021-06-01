@@ -96,7 +96,7 @@ $( document ).ready(function() {
                            </div>`;
                                     
          $(".music-container").append(searchDiv);
-         $(".search-bar").css({"height":" 5vh","width":"50vw","border":"0.5px solid grey", "color":"grey", "border-radius": "25px", "display":"flex", "justify-content":"center", "align-items":"center", "margin": "70px" });
+         $(".search-bar").css({"height":" 5vh","width":"50vw","border":"0.5px solid grey", "color":"grey", "border-radius": "25px", "display":"flex", "justify-content":"center", "align-items":"center", "margin": "30px" });
          $(".col").css({"display":"inline-block !important"});
           
          $(".search-screen").css({"background-color":"black", "height":"88vh" , "width":"83vw", "display":"flex","flex-direction":"column","justify-content":"center" ,  "box-shadow":"0 0 10px grey"});
@@ -156,7 +156,8 @@ $( document ).ready(function() {
 
 
  $(document).on('keydown', function(event) {
-    if (event.key == "Escape") {
-        alert('Esc key pressed.');
+    if (event.key == "Escape" && isSearchOpen) {
+        console.log("ok");
+        $(".search-screen").remove();     
     }
 });
