@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     //HOME =================================================================================
     let category = ["taylor", "motivational", "bollywood", "punjabi"];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
         $.ajax({
             url: `https://api.spotify.com/v1/search?q=${category[i]}&type=track`,
             type: 'GET',
@@ -55,7 +55,7 @@ $(document).ready(function () {
                     // Constructing two different iframes to embed the song
                     let src_str = `https://open.spotify.com/embed/track/${id}`;
                     let iframe = `<div class='song'><iframe src=${src_str} frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>`;
-                    let parent_div = $('#song-home_' + count);
+                    let parent_div = $(`row-${i} #song-home_${count}`);
                     parent_div.html(iframe);
 
                     count++;
