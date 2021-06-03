@@ -21,6 +21,7 @@ body {
 .music-container {
     height: 88vh;
     width: 83vw;
+    position: relative;
     background-color: #1b2323;
     display: flex;
     position: relative;
