@@ -40,8 +40,8 @@ $(document).ready(function () {
     }
 
     //HOME =================================================================================
-    let category = ["Taylor","motivational", "bollywood", "punjabi"];
-    for (let i = 0; i < 5; i++) {
+    let category = ["Taylor","motivational", "bollywood", "punjabi", "Pop", "Bollywood 00's", "punjabi love"];
+    for (let i = 0; i < category.length; i++) {
         $.ajax({
             url: `https://api.spotify.com/v1/search?q=${category[i]}&type=track`,
             type: 'GET',
@@ -54,7 +54,7 @@ $(document).ready(function () {
                 let count = 0;
 
 
-                const max_songs = 5;
+                const max_songs = 8;
                 while (count <= max_songs && count <= num_of_tracks) {
                     // Extract the id of the FIRST song from the data object
                     let id = data.tracks.items[count].id;
@@ -170,9 +170,6 @@ $(document).ready(function () {
         }
 
     });
-
-
-
 
 }); // End of document.ready
 
