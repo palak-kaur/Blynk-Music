@@ -48,8 +48,8 @@ $(document).ready(function () {
                 let count = 0;
 
 
-                const max_songs = 5;
-                while (count < max_songs && count < num_of_tracks) {
+                const max_songs = 4;
+                while (count <= max_songs && count <= num_of_tracks) {
                     // Extract the id of the FIRST song from the data object
                     let id = data.tracks.items[count].id;
                     // Constructing two different iframes to embed the song
