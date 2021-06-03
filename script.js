@@ -40,7 +40,7 @@ $(document).ready(function () {
     }
 
     //HOME =================================================================================
-    let category = ["Taylor","motivational", "bollywood", "punjabi", "Pop", "Bollywood 00's", "punjabi love"];
+    let category = ["Taylor","motivational", "bollywood", "punjabi", "Pop", "shahrukh", "punjabi love"];
     for (let i = 0; i < category.length; i++) {
         $.ajax({
             url: `https://api.spotify.com/v1/search?q=${category[i]}&type=track`,
