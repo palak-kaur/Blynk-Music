@@ -103,6 +103,13 @@ body {
     color: whitesmoke;
     font-size: large;
     display: flex;
+}
+
+#row-1, 
+#row-2,
+#row-3,
+#row-0{
+    display: flex;
     flex-direction: row;
 }
 
