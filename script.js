@@ -104,7 +104,7 @@ $(document).ready(function () {
                                 </div>
                            </div>`;
 
-            $(".music-container").append(searchDiv);
+            $(".container").append(searchDiv);
             $(".search-bar").css({ "height": " 5vh", "width": "50vw", "border": "0.5px solid grey", "color": "grey", "border-radius": "25px", "display": "flex", "justify-content": "center", "align-items": "center", "margin": "30px" });
             $(".col").css({ "display": "inline-block !important" });
 
