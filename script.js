@@ -1,6 +1,3 @@
-const ps = new PerfectScrollbar("#cells", {
-    wheelSpeed: 15
-});
 
 // Document has been loaded
 $(document).ready(function () {
@@ -19,6 +16,11 @@ $(document).ready(function () {
             }
         }
     };
+
+    const ps = new PerfectScrollbar(".music-container", {
+        wheelSpeed: 15
+    });
+    
 
     // Get Access Token
     const accessToken = getUrlParameter('access_token');
