@@ -41,7 +41,7 @@ $(document).ready(function () {
 
     //HOME =================================================================================
     let category = ["Taylor","motivational", "bollywood", "punjabi"];
-    for (let i = 1; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         $.ajax({
             url: `https://api.spotify.com/v1/search?q=${category[i]}&type=track`,
             type: 'GET',
@@ -54,7 +54,7 @@ $(document).ready(function () {
                 let count = 0;
 
 
-                const max_songs = 4;
+                const max_songs = 5;
                 while (count <= max_songs && count <= num_of_tracks) {
                     // Extract the id of the FIRST song from the data object
                     let id = data.tracks.items[count].id;
