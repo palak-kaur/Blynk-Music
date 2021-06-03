@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     //HOME =================================================================================
     let category = ["Taylor","motivational", "bollywood", "punjabi"];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i < 5; i++) {
         $.ajax({
             url: `https://api.spotify.com/v1/search?q=${category[i]}&type=track`,
             type: 'GET',
