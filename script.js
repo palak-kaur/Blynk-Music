@@ -77,6 +77,7 @@ $(document).ready(function () {
     let isSearchOpen = false;
     $(".search-nav").click(function (e) {
         if (!isSearchOpen) {
+            $(".music-container").hide();
             let searchDiv = `<div class="search-screen" >
                                <div class = "search-bar" contenteditable = "true"> Search </div>
                                <div class="container" id="song-list">
@@ -165,9 +166,11 @@ $(document).ready(function () {
             console.log("ok");
             $(".search-screen").remove();
             isSearchOpen = false;
+            $(".music-container").show();
         }
 
     });
+
 
 
 
