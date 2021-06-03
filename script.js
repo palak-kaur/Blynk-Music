@@ -1,3 +1,7 @@
+const ps = new PerfectScrollbar("#cells", {
+    wheelSpeed: 15
+});
+
 // Document has been loaded
 $(document).ready(function () {
     // Helper Function to Extract Access Token for URL
