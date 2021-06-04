@@ -56,6 +56,11 @@ body {
     justify-content: center;
 }
 
+.video{
+    width : 100vw;
+    height: 12vh;
+}
+
 .logo{
     height : 20vh;
     width: 17vw;
@@ -116,8 +121,6 @@ body {
     display: flex;
     flex-direction: row;
 }
-
-
 
 
 .col-home{
