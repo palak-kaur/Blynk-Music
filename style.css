@@ -50,7 +50,6 @@ body {
     height: 12vh;
     position: absolute;
     bottom: 0; 
-    box-shadow: 10px 10px 8px 10px white;
    
     overflow: hidden;
 }
@@ -126,7 +125,7 @@ body {
 
 .visual{
     height: 12vh ; 
-    width: 100vw;
+    width: 25vw;
 }
 
 
