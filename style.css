@@ -125,7 +125,9 @@ body {
 
 .visual{
     height: 12vh ; 
-    width: 25vw;
+    width: 20vw;
+    margin: none;
+    padding: none;
 }
 
 
