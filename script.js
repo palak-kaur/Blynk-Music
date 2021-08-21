@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     // AUTHORIZE with Spotify (if needed)
     // *************** REPLACE THESE VALUES! *************************
-    let client_id = '6b2fe20563104c14a38fbf53e60ecfe8';
+    let client_id = 'b8668bbbe394492096c71f52a55757e3';
     // Use the following site to convert your regular url to the encoded version:
     // https://www.url-encode-decode.com/
     let redirect_uri = 'https%3A%2F%2Fpalak-kaur.github.io%2FBlynk-Music'; // GitHub Pages URL or whatever your public url to this app is
